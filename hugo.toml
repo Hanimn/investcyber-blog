@@ -18,9 +18,9 @@ theme = 'PaperMod'
   # Favicon and Apple Touch Icon configuration
   # Ensure these files are in the 'assets' directory
   assets.favicon = "favicon.svg" 
-  # assets.favicon16x16 = "favicon-16x16.png" # Commented out: ensure file exists in assets if uncommented
-  # assets.favicon32x32 = "favicon-32x32.png" # Commented out: ensure file exists in assets if uncommented
-  # assets.apple_touch_icon = "apple-touch-icon.png" # Commented out: ensure file exists in assets if uncommented
+  assets.favicon16x16 = "favicon-16x16.png" # Uncommented: ensure file exists in static if uncommented
+  assets.favicon32x32 = "favicon-32x32.png" # Uncommented: ensure file exists in static if uncommented
+  assets.apple_touch_icon = "apple-touch-icon.png" # Uncommented: ensure file exists in static if uncommented
   assets.faviconSVG = "favicon.svg" # For browsers that prefer SVG favicons
   assets.safari_pinned_tab = "favicon.svg" # For Safari pinned tabs, use a monochrome SVG (can be same as favicon.svg if suitable)
   
@@ -100,22 +100,22 @@ theme = 'PaperMod'
     weight = 10
     
   [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
+    identifier = "blog"  # Changed from "posts"
+    name = "Blog"         # Changed from "Posts"
+    url = "/blog/"        # Changed from "/posts/"
     weight = 20
     
   [[menu.main]]
     identifier = "projects"
-    name = "Projects"
+    name = "Projects/Tools"
     url = "/projects/"
     weight = 30
     
-  # [[menu.main]]
-  #   identifier = "search"
-  #   name = "Search"
-  #   url = "/search/"
-  #   weight = 35
+  [[menu.main]]
+    identifier = "talks"
+    name = "Talks"
+    url = "/talks/"
+    weight = 35 # Placed after Projects
     
   [[menu.main]]
     identifier = "about"
@@ -131,3 +131,21 @@ theme = 'PaperMod'
 
 [markup.goldmark.renderer]
   unsafe = true # Allow raw HTML for callout boxes
+
+[[params.assets.favicons]]
+src = "favicon-16x16.png"
+sizes = "16x16"
+type = "image/png"
+
+[[params.assets.favicons]]
+src = "favicon-32x32.png"
+sizes = "32x32"
+type = "image/png"
+
+[[params.assets.favicons]]
+src = "apple-touch-icon.png"
+sizes = "180x180"
+type = "image/png"
+linkRel = "apple-touch-icon"
+
+mainSections = []

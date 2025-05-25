@@ -1,5 +1,6 @@
 /* Import fonts at the very beginning */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* Ensure this is not overriding or conflicting with theme variables if PaperMod uses them.
    If PaperMod has its own dark mode variables, it might be better to use/override them. */
@@ -366,53 +367,107 @@ body.dark .scroll-top:hover {
 /* Ensure theme toggle is hidden if `disableThemeToggle = true` in hugo.toml */
 /* This is usually handled by PaperMod, but good to be aware */
 
-/* Project Cards Styling */
-body.dark .project-card {
-    background-color: var(--content-background);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
+/* --- General Project Card Styles --- */
+.project-card {
+    display: flex;
+    flex-direction: row; /* Ensures items are in a row */
+    align-items: flex-start; /* Align items to the top */
+    background-color: var(--entry, #fff); /* Default to PaperMod entry background or white */
+    border: 1px solid var(--border-color, #e0e0e0); /* Default to PaperMod border or light grey */
+    border-radius: var(--radius, 6px);
     padding: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease; /* Added border-color to transition */
-    display: flex; /* Keep flex display */
-    flex-direction: row; /* Change to row for side-by-side layout */
-    align-items: flex-start; /* Align items to the top */
+    box-shadow: var(--box-shadow, 0 2px 4px rgba(0,0,0,0.1)); /* Default shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease;
+    flex-direction: row;
     animation: fadeInSlideUp 0.6s ease-out forwards;
     opacity: 0; /* Initial state for animation */
 }
 
-body.dark .project-card:hover {
-    border-color: #dc3545; /* Red border on hover */
-    box-shadow: 0 6px 12px rgba(220, 53, 69, 0.3); /* Red shadow on hover */
-    /* transform: scale(1.01); */ /* Optional: can add a slight scale on hover too */
+.project-card:hover {
+    border-color: var(--primary, #007bff); /* Use PaperMod primary color or a default blue */
+    box-shadow: var(--box-shadow-hover, 0 4px 8px rgba(0,0,0,0.15)); /* Default hover shadow */
 }
 
-body.dark .project-card-image {
-    width: 30%; /* Adjust width as needed, e.g., 30% or a fixed pixel value */
-    max-width: 180px; /* Optional: set a max width for the image */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover;
-    border-radius: 4px;
-    margin-right: 20px; /* Space between image and text */
-    margin-bottom: 0; /* Remove bottom margin as it's now side-by-side */
+.project-card-image {
+    width: 35%;           /* Use a percentage for responsive width */
+    max-width: 250px;     /* Set a maximum width */
+    min-width: 150px;     /* Set a minimum width */
+    height: 200px;        /* Fixed height for the image */
+    object-fit: cover;    /* Crop image to fit container, maintaining aspect ratio */
+    border-right: 1px solid #ddd; /* Separator line */
+    flex-shrink: 0;       /* Prevent the image from shrinking too much relative to content */
+    margin-right: 20px;   /* Add some space between image and text */
 }
 
-body.dark .project-card-content {
-    flex: 1; /* Allow text content to take remaining space */
+.project-image-container {
+    width: 35%;
+    max-width: 250px;
+    min-width: 150px;
+    height: 180px; /* Added fixed height */
+    margin-right: 20px;
+    flex-shrink: 0;
+    overflow: hidden; /* Crucial for object-fit: cover */
 }
 
-body.dark .project-card h3 {
+.project-card .project-image-container img {
+    width: 100%;
+    height: 100%; /* Make image fill the container's height */
+    border-radius: var(--radius-small);
+    object-fit: cover; /* Cover the area, maintain aspect ratio, crop if necessary */
+    display: block;
+}
+
+.project-card-content {
+    padding: 15px 20px;
+    flex-grow: 1;         /* Allows text content to take remaining space */
+}
+
+.project-card h3 {
     margin-top: 0;
-    color: var(--heading-color);
+    color: var(--primary-color, #333); /* Default heading color */
     font-size: 1.6em;
     margin-bottom: 10px;
 }
 
-body.dark .project-card p {
+.project-card p {
     margin-bottom: 8px;
-    color: var(--text-color);
+    color: var(--primary-color, #555); /* Default text color */
     line-height: 1.5;
+}
+
+.project-card p strong {
+    color: var(--primary-color, #333); /* Default strong color */
+    font-weight: bold;
+}
+
+.project-card a {
+    color: var(--link-color, #007bff);
+    text-decoration: underline;
+}
+
+.project-card a:hover {
+    color: var(--link-hover-color, #0056b3);
+}
+
+/* --- Dark Theme Overrides for Project Cards --- */
+body.dark .project-card {
+    background-color: var(--content-background); /* Custom dark theme variable */
+    border: 1px solid var(--border-color);       /* Custom dark theme variable */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);       /* Custom dark theme shadow */
+}
+
+body.dark .project-card:hover {
+    border-color: #dc3545; /* Red border on hover for dark theme */
+    box-shadow: 0 6px 12px rgba(220, 53, 69, 0.3); /* Red shadow on hover for dark theme */
+}
+
+body.dark .project-card h3 {
+    color: var(--heading-color);
+}
+
+body.dark .project-card p {
+    color: var(--text-color);
 }
 
 body.dark .project-card p strong {
@@ -420,69 +475,209 @@ body.dark .project-card p strong {
 }
 
 body.dark .project-card a {
-    color: var(--link-color);
-    text-decoration: underline;
+    color: var(--link-color); /* Uses dark theme link color */
 }
 
 body.dark .project-card a:hover {
-    color: var(--link-hover-color);
+    color: var(--link-hover-color); /* Uses dark theme link hover color */
 }
 
-/* GitHub Link Button Styling */
-body.dark .github-link-button {
-    display: inline-flex; /* Align icon and text */
-    align-items: center; /* Vertically center icon and text */
+
+/* --- General GitHub Link Button Styling --- */
+.github-link-button {
+    display: inline-flex; 
+    align-items: center; 
     padding: 8px 15px;
-    background-color: var(--button-background, #333);
-    color: var(--button-text-color, #E0E0E0);
-    border: 1px solid var(--border-color, #2A2A2A);
-    border-radius: 4px;
+    background-color: var(--button-bg, #f0f0f0); /* Default light button background */
+    color: var(--button-color, #333);            /* Default light button text color */
+    border: 1px solid var(--button-border-color, #ccc); /* Default light button border */
+    border-radius: var(--radius, 4px);
     text-decoration: none !important;
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
     font-size: 0.9em;
-    box-shadow: none; /* Remove any default shadow */
+    box-shadow: none; 
+}
+
+.github-link-button:hover,
+.github-link-button:focus {
+    background-color: var(--button-hover-bg, #e0e0e0);
+    color: var(--button-hover-color, #111);
+    border-color: var(--button-hover-border-color, #bbb);
+    text-decoration: none !important; 
+    box-shadow: none; 
+}
+
+.github-link-button svg {
+    width: 16px; 
+    height: 16px; 
+    margin-right: 8px; 
+    fill: currentColor; 
+}
+
+/* --- Dark Theme Overrides for GitHub Link Button --- */
+body.dark .github-link-button {
+    background-color: var(--button-background); /* Custom dark theme variable */
+    color: var(--button-text-color);       /* Custom dark theme variable */
+    border: 1px solid var(--border-color);   /* Custom dark theme variable */
 }
 
 body.dark .github-link-button:hover,
 body.dark .github-link-button:focus {
-    background-color: var(--button-hover-background, #444);
-    color: var(--link-hover-color, #FFFFFF);
-    border-color: #555; /* Slightly lighter border on hover */
-    text-decoration: none !important; /* Ensure no underline on hover/focus */
-    box-shadow: none; /* Ensure no shadow on hover/focus */
+    background-color: var(--button-hover-background);
+    color: var(--link-hover-color); /* Use link-hover-color for text on hover in dark mode */
+    border-color: #555; 
 }
 
-body.dark .github-link-button svg {
-    width: 16px; /* Adjust size as needed */
-    height: 16px; /* Adjust size as needed */
-    margin-right: 8px; /* Space between icon and text */
-    fill: currentColor; /* Icon color matches text color */
-}
-
-/* Responsive adjustments for project cards */
+/* --- Responsive adjustments for project cards (General) --- */
 @media (max-width: 768px) {
-    body.dark .project-card {
-        flex-direction: column; /* Stack image and content vertically */
+    .project-card {
+        flex-direction: column; 
     }
 
-    body.dark .project-card-image {
-        width: 100%; /* Image takes full width */
-        max-width: none; /* Remove max-width constraint for stacked layout */
-        margin-right: 0; /* No right margin when stacked */
-        margin-bottom: 15px; /* Add bottom margin to separate from text */
+    .project-image-container {
+        width: 80%; 
+        max-width: 300px; 
+        min-width: unset; 
+        height: 200px; /* Added fixed height for mobile */
+        margin-right: 0;
+        margin-bottom: 1em; 
     }
 
-    body.dark .project-card-content {
-        width: 100%; /* Content takes full width */
+    .project-card .project-image-container img {
+       width: 100%; /* Ensure these are explicitly set or inherited */
+       height: 100%;
+       object-fit: cover;
     }
 }
 
-/* Optional: Grid layout for project cards if you have many */
-/* You would need to wrap the project cards in a container div in your markdown, e.g., <div class="projects-grid"> */
-/*
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+/* --- Filter Button Styles --- */
+.filter-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
+
+.filter-button {
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: var(--radius, 4px);
+    border: 1px solid var(--button-border-color, #ccc);
+    background-color: var(--button-bg, #f0f0f0);
+    color: var(--button-color, #333);
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-button:hover {
+    background-color: var(--button-hover-bg, #e0e0e0);
+    border-color: var(--button-hover-border-color, #bbb);
+}
+
+.filter-button.active {
+    background-color: var(--primary, #007bff); /* Use PaperMod primary or default blue */
+    color: var(--primary-contrast, #fff); /* Text color that contrasts with primary */
+    border-color: var(--primary, #007bff);
+}
+
+/* Dark Theme Overrides for Filter Buttons */
+body.dark .filter-button {
+    border: 1px solid var(--border-color);
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+}
+
+body.dark .filter-button:hover {
+    background-color: var(--button-hover-background);
+    border-color: #555;
+}
+
+body.dark .filter-button.active {
+    background-color: var(--link-hover-color); /* A distinct color for active button in dark mode */
+    color: var(--primary-background); /* Contrasting text for active button in dark mode */
+    border-color: var(--link-hover-color);
+}
+
+/* Talk Cards Styling */
+.talk-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center cards if they don't fill the row */
+}
+
+.talk-card {
+    border: 1px solid var(--border-color); /* Use theme's border color */
+    border-radius: var(--radius); /* Use theme's border radius */
+    padding: 20px;
+    margin-bottom: 20px; /* Or use gap in flex container */
+    background-color: var(--card-background-color); /* Use theme's card background */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+    width: 100%; /* Default to full width */
+    max-width: 400px; /* Max width for larger screens, adjust as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.talk-card h3 {
+    margin-top: 0;
+    color: var(--primary-color); /* Use theme's primary color */
+}
+
+.talk-card p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.talk-card .talk-meta {
+    font-size: 0.9em;
+    color: var(--secondary-color); /* Use theme's secondary color */
+    margin-bottom: 15px;
+}
+
+.talk-card .talk-links a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: var(--link-color); /* Use theme's link color */
+    font-weight: bold;
+}
+
+.talk-card .talk-links a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color); /* Use theme's link hover color */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .talk-card {
+        width: calc(50% - 20px); /* Two cards per row, considering gap */
+    }
+}
+
+@media (min-width: 1024px) {
+    .talk-card {
+        width: calc(33.333% - 20px); /* Three cards per row, considering gap */
+    }
+}
+
+/* Typing Animation Cursor */
+/* 
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em; 
+  background-color: var(--content); 
+  animation: blink 0.7s infinite;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+} 
 */
