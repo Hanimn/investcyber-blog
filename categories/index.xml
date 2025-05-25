@@ -6,34 +6,41 @@
     <description>Recent content in Categories on Invest Cyber</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 May 2025 16:54:31 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 25 May 2025 14:40:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Intelligence</title>
-      <link>http://localhost:1313/categories/intelligence/</link>
-      <pubDate>Sun, 25 May 2025 14:15:00 +0100</pubDate>
-      <guid>http://localhost:1313/categories/intelligence/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tools</title>
-      <link>http://localhost:1313/categories/tools/</link>
-      <pubDate>Sun, 25 May 2025 14:13:09 +0100</pubDate>
-      <guid>http://localhost:1313/categories/tools/</guid>
+      <title>Ethics</title>
+      <link>http://localhost:1313/categories/ethics/</link>
+      <pubDate>Sun, 25 May 2025 14:40:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/ethics/</guid>
       <description></description>
     </item>
     <item>
       <title>Red Team</title>
       <link>http://localhost:1313/categories/red-team/</link>
-      <pubDate>Sun, 25 May 2025 14:10:00 +0100</pubDate>
+      <pubDate>Sun, 25 May 2025 14:40:00 +0100</pubDate>
       <guid>http://localhost:1313/categories/red-team/</guid>
       <description></description>
     </item>
     <item>
-      <title>General</title>
-      <link>http://localhost:1313/categories/general/</link>
-      <pubDate>Sun, 25 May 2025 13:45:45 +0100</pubDate>
-      <guid>http://localhost:1313/categories/general/</guid>
+      <title>Strategy</title>
+      <link>http://localhost:1313/categories/strategy/</link>
+      <pubDate>Sun, 25 May 2025 14:40:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/strategy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tooling</title>
+      <link>http://localhost:1313/categories/tooling/</link>
+      <pubDate>Sun, 25 May 2025 14:35:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/tooling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>http://localhost:1313/categories/automation/</link>
+      <pubDate>Sun, 25 May 2025 14:30:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/automation/</guid>
       <description></description>
     </item>
   </channel>
