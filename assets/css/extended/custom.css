@@ -1,8 +1,36 @@
+/* Import fonts at the very beginning */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Ensure this is not overriding or conflicting with theme variables if PaperMod uses them.
+   If PaperMod has its own dark mode variables, it might be better to use/override them. */
+/* The following block was an earlier version of dark theme variables and has been removed
+   to avoid conflicts with the more detailed "Monochromatic Professional Dark Theme" below.
+body.dark {
+    --primary-color: #333; 
+    --secondary-color: #444; 
+    --accent-color: #007bff; 
+    --text-color: #ccc; 
+    --background-color: #222; 
+    --border-color: #555; 
+    --link-color: #8ab4f8; 
+    --hover-color: #0056b3; 
+    --code-bg-color: #2b2b2b; 
+    --card-bg-color: #2a2a2a; 
+    --card-border-color: #404040; 
+}
+*/
+
+/* General body styling */
+body {
+    /* font-family: 'Inter', sans-serif; */ /* Commented out to restore theme default font */
+    background-color: var(--background-color); /* Uses PaperMod's default --background-color */
+    color: var(--text-color); /* Uses PaperMod's default --text-color */
+    line-height: 1.6;
+}
 
 /* Monochromatic Professional Dark Theme for Invest Cyber Blog */
 
-/* CSS Variables */
+/* CSS Variables for Dark Mode */
 body.dark {
   --primary-background: #121212; /* Very dark grey, near black */
   --content-background: #1E1E1E; /* Slightly lighter dark grey for cards/posts */
@@ -18,17 +46,18 @@ body.dark {
   --tag-text-color: #C0C0C0;
   --tag-hover-background: #2A2A2A;
 
-  /* Font families - prioritize system fonts, easily overridable */
+  /* Font families - Inter is available if needed for specific elements, but not applied globally to body.dark */
   --font-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
-/* General Body Styling */
+/* General Body Styling for Dark Mode */
+/* This block applies the dark mode variables defined above. */
 body.dark {
   background-color: var(--primary-background);
   color: var(--text-color);
-  font-family: var(--font-sans-serif);
-  line-height: 1.6;
+  /* font-family: var(--font-sans-serif); */ /* Explicitly commented out to ensure theme's default font is used */
+  /* line-height: 1.6; */ /* This is already set in the general 'body' rule, no need to repeat unless different for dark mode */
 }
 
 /* Headings */
@@ -397,6 +426,37 @@ body.dark .project-card a {
 
 body.dark .project-card a:hover {
     color: var(--link-hover-color);
+}
+
+/* GitHub Link Button Styling */
+body.dark .github-link-button {
+    display: inline-flex; /* Align icon and text */
+    align-items: center; /* Vertically center icon and text */
+    padding: 8px 15px;
+    background-color: var(--button-background, #333);
+    color: var(--button-text-color, #E0E0E0);
+    border: 1px solid var(--border-color, #2A2A2A);
+    border-radius: 4px;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    font-size: 0.9em;
+    box-shadow: none; /* Remove any default shadow */
+}
+
+body.dark .github-link-button:hover,
+body.dark .github-link-button:focus {
+    background-color: var(--button-hover-background, #444);
+    color: var(--link-hover-color, #FFFFFF);
+    border-color: #555; /* Slightly lighter border on hover */
+    text-decoration: none !important; /* Ensure no underline on hover/focus */
+    box-shadow: none; /* Ensure no shadow on hover/focus */
+}
+
+body.dark .github-link-button svg {
+    width: 16px; /* Adjust size as needed */
+    height: 16px; /* Adjust size as needed */
+    margin-right: 8px; /* Space between icon and text */
+    fill: currentColor; /* Icon color matches text color */
 }
 
 /* Responsive adjustments for project cards */

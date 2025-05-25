@@ -5,36 +5,28 @@ draft = false
 description = ""
 +++
 
-
-## Featured Projects
-
 <div class="project-card">
-    <img src="https://placehold.co/300x200/2F2F2F/FFFFFF?text=Sample+Project+1" alt="Sample project image for LogSweep" class="project-card-image">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Daemon-phk.svg/1200px-Daemon-phk.svg.png" alt="Sample project image for LogSweep" class="project-card-image">
     <div class="project-card-content">
         <h3>LogSweep OSQuery Extensions</h3>
         <p><strong>Description:</strong> A collection of custom OSQuery extensions designed to enhance endpoint detection and response capabilities. Focuses on Linux systems, providing deeper insights into running processes, network connections, and user activity.</p>
         <p><strong>Technologies:</strong> C++, OSQuery SDK, CMake, Linux</p>
-        <p><a href="https://github.com/yourusername/logsweep" target="_blank">View on GitHub</a></p>
+        <p><a href="https://github.com/yourusername/logsweep" target="_blank" class="github-link-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+            View on GitHub
+        </a></p>
     </div>
 </div>
 
 <div class="project-card">
-    <img src="https://placehold.co/300x200/1E1E1E/E0E0E0?text=Project+2" alt="Placeholder project image 2" class="project-card-image">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Daemon-phk.svg/1200px-Daemon-phk.svg.png" alt="ThreatIntel Aggregator project image" class="project-card-image">
     <div class="project-card-content">
         <h3>ThreatIntel Aggregator</h3>
         <p><strong>Description:</strong> A Python-based tool that aggregates threat intelligence feeds from various open-source and private sources. It normalizes data, removes duplicates, and provides a simple API for querying indicators of compromise (IOCs).</p>
         <p><strong>Technologies:</strong> Python, FastAPI, SQLite, Docker</p>
-        <p><a href="https://github.com/yourusername/threatintel-aggregator" target="_blank">View on GitHub</a></p>
+        <p><a href="https://github.com/yourusername/threatintel-aggregator" target="_blank" class="github-link-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+            View on GitHub
+        </a></p>
     </div>
 </div>
-
----
-*(To add more projects, copy the `div class="project-card"` structure above and fill in the details for each new project.)*
-
-## Older Contributions / Smaller Scripts
-
-(This is an optional section if you have less prominent or older work you'd still like to mention. You can use the same card structure or a simpler list format here.)
-
----
-
-Feel free to explore, and I welcome any feedback or contributions!

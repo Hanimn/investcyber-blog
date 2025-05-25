@@ -1,5 +1,5 @@
 enableGitInfo = true # Temporarily disabled to prevent build error if no git commits
-baseURL = 'https://invest-cyber.netlify.app/'
+baseURL = 'https://investcyber.com/'
 languageCode = 'en-us'
 title = 'Invest Cyber'
 theme = 'PaperMod'
@@ -13,7 +13,7 @@ theme = 'PaperMod'
   ShowLastMod = true # Temporarily disabled
   description = "Investing in Cybersecurity Knowledge & Red Team Excellence"
   keywords = ["cybersecurity", "red team", "penetration testing", "infosec"]
-  # customCSS = ["css/custom.css"] # Commented out as PaperMod should pick it up from assets/css/extended/
+  customCSS = ["css/extended/custom.css"] # Corrected path
   
   # Favicon and Apple Touch Icon configuration
   # Ensure these files are in the 'assets' directory
@@ -75,8 +75,7 @@ theme = 'PaperMod'
   
   # Site logo configuration for PaperMod
   [params.label]
-    text = "Invest Cyber"
-    icon = "images/logo.svg"
+    icon = "images/logo.svg" # Reverted to no leading slash, expecting it to be relative to static/ or assets/
     iconHeight = 35
   
   # Home page content
