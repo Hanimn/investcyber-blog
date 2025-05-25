@@ -1,0 +1,134 @@
+enableGitInfo = true # Temporarily disabled to prevent build error if no git commits
+baseURL = 'https://invest-cyber.netlify.app/'
+languageCode = 'en-us'
+title = 'Invest Cyber'
+theme = 'PaperMod'
+
+# Output formats for search functionality
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  author = "Hani Momeninia" # Updated author name
+  ShowLastMod = true # Temporarily disabled
+  description = "Investing in Cybersecurity Knowledge & Red Team Excellence"
+  keywords = ["cybersecurity", "red team", "penetration testing", "infosec"]
+  # customCSS = ["css/custom.css"] # Commented out as PaperMod should pick it up from assets/css/extended/
+  
+  # Favicon and Apple Touch Icon configuration
+  # Ensure these files are in the 'assets' directory
+  assets.favicon = "favicon.ico" 
+  assets.favicon16x16 = "favicon-16x16.png"
+  assets.favicon32x32 = "favicon-32x32.png"
+  assets.apple_touch_icon = "apple-touch-icon.png"
+  assets.faviconSVG = "favicon.svg" # For browsers that prefer SVG favicons
+  assets.safari_pinned_tab = "favicon.svg" # For Safari pinned tabs, use a monochrome SVG (can be same as favicon.svg if suitable)
+  
+  # PaperMod specific
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowToc = true
+  ShowSearchPage = true
+  ShowFullTextinRSS = true
+  
+  # Enhanced search experience
+  defaultTheme = "dark" # Set default theme to dark
+  disableThemeToggle = true # Disable theme toggle
+  ShowAllPagesInArchive = true
+  ShowPageNums = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+  
+  # Search functionality - Enhanced configuration
+  fuseOpts.isCaseSensitive = false
+  fuseOpts.shouldSort = true
+  fuseOpts.location = 0
+  fuseOpts.distance = 1000
+  fuseOpts.threshold = 0.2
+  fuseOpts.minMatchCharLength = 1
+  fuseOpts.includeScore = true
+  fuseOpts.includeMatches = true
+  fuseOpts.findAllMatches = true
+  fuseOpts.ignoreLocation = false
+  fuseOpts.ignoreFieldNorm = false
+  fuseOpts.useExtendedSearch = true
+  fuseOpts.keys = [
+    {name = "title", weight = 10.0},
+    {name = "tags", weight = 8.0},
+    {name = "categories", weight = 7.0},
+    {name = "summary", weight = 6.0},
+    {name = "description", weight = 5.0},
+    {name = "content", weight = 3.0},
+    {name = "permalink", weight = 1.0}
+  ]
+  
+  # Site logo configuration for PaperMod
+  [params.label]
+    text = "Invest Cyber"
+    icon = "images/logo.svg"
+    iconHeight = 35
+  
+  # Home page content
+  [params.homeInfoParams]
+    Title = "Welcome to Invest Cyber"
+    Content = "Investing in Cybersecurity Knowledge & Red Team Excellence"
+  
+  # Social links
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/yourusername"
+  
+  [[params.socialIcons]]
+  name = "linkedin"
+  url = "https://linkedin.com/in/yourprofile"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+    
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 20
+    
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 30
+    
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 35
+    
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 40
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = true
+    noClasses = false
+
+[markup.goldmark.renderer]
+  unsafe = true # Allow raw HTML for callout boxes

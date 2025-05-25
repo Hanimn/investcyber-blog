@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Monochromatic Professional Dark Theme for Invest Cyber Blog */
+
+/* CSS Variables */
+body.dark {
+  --primary-background: #121212; /* Very dark grey, near black */
+  --content-background: #1E1E1E; /* Slightly lighter dark grey for cards/posts */
+  --text-color: #E0E0E0;         /* Off-white for readability */
+  --heading-color: #F5F5F5;      /* Brighter off-white for headings */
+  --link-color: #E0E0E0;
+  --link-hover-color: #FFFFFF;
+  --border-color: #2A2A2A;       /* Muted darker grey for borders */
+  --button-background: #333333;
+  --button-text-color: #E0E0E0;
+  --button-hover-background: #444444;
+  --tag-border-color: #444444;
+  --tag-text-color: #C0C0C0;
+  --tag-hover-background: #2A2A2A;
+
+  /* Font families - prioritize system fonts, easily overridable */
+  --font-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* General Body Styling */
+body.dark {
+  background-color: var(--primary-background);
+  color: var(--text-color);
+  font-family: var(--font-sans-serif);
+  line-height: 1.6;
+}
+
+/* Headings */
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+  color: var(--heading-color);
+  font-family: var(--font-sans-serif);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+body.dark h1 { font-size: 2.2em; }
+body.dark h2 { font-size: 1.8em; }
+body.dark h3 { font-size: 1.5em; }
+
+/* Links */
+body.dark a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+body.dark a:hover,
+body.dark a:focus {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* Paragraphs */
+body.dark p {
+  margin-bottom: 1em;
+}
+
+/* Content Entry Background (posts, cards) */
+body.dark .entry,
+body.dark .post-entry {
+  background-color: var(--content-background);
+  border: 1px solid var(--border-color);
+  border-radius: 6px; /* Slightly rounded corners */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Subtle shadow */
+}
+
+body.dark .post-entry:hover {
+  border-color: #555;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Header & Navigation */
+body.dark .header {
+  background-color: var(--content-background);
+  border-bottom: 1px solid var(--border-color);
+}
+
+body.dark .logo a,
+body.dark .logo a .logo-text {
+  color: var(--heading-color);
+  text-decoration: none;
+}
+body.dark .logo a:hover .logo-text {
+  color: var(--link-hover-color);
+}
+
+body.dark .menu a {
+  color: var(--text-color);
+  padding-bottom: 5px; /* Space for potential underline */
+  position: relative;
+}
+
+body.dark .menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--link-hover-color);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+body.dark .menu a:hover::after,
+body.dark .menu li.active a::after {
+  width: 100%;
+  left: 0;
+}
+
+body.dark .menu a:hover,
+body.dark .menu li.active a {
+  color: var(--link-hover-color);
+  background-color: transparent !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Buttons */
+body.dark .button,
+body.dark .paginav .current {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: 1px solid var(--border-color);
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+body.dark .button:hover,
+body.dark .paginav .current:hover {
+  background-color: var(--button-hover-background);
+  border-color: #555;
+  color: var(--link-hover-color);
+}
+
+/* Tags and Categories */
+body.dark .post-tags a,
+body.dark .post-meta .meta-item-categories a {
+  border: 1px solid var(--tag-border-color);
+  color: var(--tag-text-color);
+  background-color: transparent;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  margin-right: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body.dark .post-tags a:hover,
+body.dark .post-meta .meta-item-categories a:hover {
+  background-color: var(--tag-hover-background);
+  color: var(--link-hover-color);
+  border-color: #555;
+}
+
+/* Code Blocks - Assuming Dracula or similar dark theme from hugo.toml */
+body.dark .highlight pre {
+  background-color: #282a36; /* Dracula background, or adjust if using different */
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1em;
+}
+body.dark .copy-code-button {
+    color: #ccc;
+}
+body.dark .copy-code-button:hover {
+    color: #fff;
+}
+
+/* Blockquotes */
+body.dark blockquote {
+  border-left: 3px solid var(--border-color);
+  color: #b0b0b0; /* Slightly muted text for quotes */
+  background-color: var(--primary-background); /* Match primary for subtle distinction */
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+/* Horizontal Rule */
+body.dark hr {
+  border-top: 1px solid var(--border-color);
+  opacity: 0.5;
+}
+
+/* Search Input */
+body.dark #searchInput {
+  border: 1px solid var(--border-color);
+  background-color: var(--content-background);
+  color: var(--text-color);
+  border-radius: 4px;
+}
+
+body.dark #searchInput:focus {
+  border-color: #555;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+/* Search results highlight */
+body.dark .search-highlight {
+  background-color: rgba(224, 224, 224, 0.2);
+  color: var(--link-hover-color);
+}
+
+/* Table Styling */
+body.dark table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  border: 1px solid var(--border-color);
+}
+
+body.dark table th,
+body.dark table td {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+body.dark table th {
+  background-color: var(--content-background);
+  color: var(--heading-color);
+  font-weight: bold;
+}
+
+body.dark table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Callout Boxes - Monochromatic Style */
+.callout {
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-left: 5px solid;
+  border-radius: 4px;
+  position: relative;
+  background-color: var(--content-background);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.callout::before {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+body.dark .callout.tip {
+  border-left-color: #777; /* Grey for tip */
+  color: var(--text-color);
+}
+body.dark .callout.tip::before {
+  content: "💡 Tip:";
+  color: #bbb; /* Lighter grey for icon/prefix */
+}
+
+body.dark .callout.warning {
+  border-left-color: #aaa; /* Slightly more prominent grey for warning */
+  color: var(--text-color);
+}
+body.dark .callout.warning::before {
+  content: "⚠️ Warning:";
+  color: #ddd;
+}
+
+body.dark .callout.info {
+  border-left-color: #666; /* Darker grey for info */
+  color: var(--text-color);
+}
+body.dark .callout.info::before {
+  content: "ℹ️ Info:";
+  color: #aaa;
+}
+
+/* Footer */
+body.dark .footer {
+    border-top: 1px solid var(--border-color);
+    padding: 20px 0;
+    color: #aaa;
+}
+
+/* Remove fade-in animation if it was previously added */
+body.dark article {
+  animation: none;
+  opacity: 1;
+}
+
+/* Ensure no lingering neon glow effects from previous theme */
+body.dark a:hover,
+body.dark .button:hover,
+body.dark .post-tags li a:hover,
+body.dark .archive-entry-title:hover,
+body.dark .social-icons a:hover {
+    text-shadow: none;
+    box-shadow: none;
+}
+body.dark .post-entry:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Keep this subtle shadow */
+}
+
+/* Scroll to top button */
+body.dark .scroll-top {
+    background: var(--button-background);
+    color: var(--button-text-color);
+    border: 1px solid var(--border-color);
+}
+body.dark .scroll-top:hover {
+    background: var(--button-hover-background);
+}
+
+/* Ensure theme toggle is hidden if `disableThemeToggle = true` in hugo.toml */
+/* This is usually handled by PaperMod, but good to be aware */
