@@ -18,9 +18,9 @@ theme = 'PaperMod'
   # Favicon and Apple Touch Icon configuration
   # Ensure these files are in the 'assets' directory
   assets.favicon = "favicon.svg" 
-  assets.favicon16x16 = "favicon-16x16.png"
-  assets.favicon32x32 = "favicon-32x32.png"
-  assets.apple_touch_icon = "apple-touch-icon.png"
+  # assets.favicon16x16 = "favicon-16x16.png" # Commented out: ensure file exists in assets if uncommented
+  # assets.favicon32x32 = "favicon-32x32.png" # Commented out: ensure file exists in assets if uncommented
+  # assets.apple_touch_icon = "apple-touch-icon.png" # Commented out: ensure file exists in assets if uncommented
   assets.faviconSVG = "favicon.svg" # For browsers that prefer SVG favicons
   assets.safari_pinned_tab = "favicon.svg" # For Safari pinned tabs, use a monochrome SVG (can be same as favicon.svg if suitable)
   
@@ -35,7 +35,7 @@ theme = 'PaperMod'
   ShowSearchPage = false
   ShowFullTextinRSS = true
   
-  # Enhanced search experience
+  # Enhanced search experience # This whole section can be removed if only for Fuse
   defaultTheme = "dark" # Set default theme to dark
   disableThemeToggle = true # Disable theme toggle
   ShowAllPagesInArchive = true
@@ -50,28 +50,28 @@ theme = 'PaperMod'
   showtoc = true
   tocopen = false
   
-  # Search functionality - Enhanced configuration
-  fuseOpts.isCaseSensitive = false
-  fuseOpts.shouldSort = true
-  fuseOpts.location = 0
-  fuseOpts.distance = 1000
-  fuseOpts.threshold = 0.2
-  fuseOpts.minMatchCharLength = 1
-  fuseOpts.includeScore = true
-  fuseOpts.includeMatches = true
-  fuseOpts.findAllMatches = true
-  fuseOpts.ignoreLocation = false
-  fuseOpts.ignoreFieldNorm = false
-  fuseOpts.useExtendedSearch = true
-  fuseOpts.keys = [
-    {name = "title", weight = 10.0},
-    {name = "tags", weight = 8.0},
-    {name = "categories", weight = 7.0},
-    {name = "summary", weight = 6.0},
-    {name = "description", weight = 5.0},
-    {name = "content", weight = 3.0},
-    {name = "permalink", weight = 1.0}
-  ]
+  # Search functionality - Enhanced configuration # Removing this entire block
+  # fuseOpts.isCaseSensitive = false
+  # fuseOpts.shouldSort = true
+  # fuseOpts.location = 0
+  # fuseOpts.distance = 1000
+  # fuseOpts.threshold = 0.2
+  # fuseOpts.minMatchCharLength = 1
+  # fuseOpts.includeScore = true
+  # fuseOpts.includeMatches = true
+  # fuseOpts.findAllMatches = true
+  # fuseOpts.ignoreLocation = false
+  # fuseOpts.ignoreFieldNorm = false
+  # fuseOpts.useExtendedSearch = true
+  # fuseOpts.keys = [
+  #   {name = "title", weight = 10.0},
+  #   {name = "tags", weight = 8.0},
+  #   {name = "categories", weight = 7.0},
+  #   {name = "summary", weight = 6.0},
+  #   {name = "description", weight = 5.0},
+  #   {name = "content", weight = 3.0},
+  #   {name = "permalink", weight = 1.0}
+  # ]
   
   # Site logo configuration for PaperMod
   [params.label]
