@@ -1,9 +1,9 @@
-+++
-title = 'About Invest Cyber'
-date = '2025-05-25T13:45:45+01:00'
-draft = false
-description = 'Learn more about Invest Cyber and our cybersecurity investment philosophy'
-+++
+---
+title: "About Invest Cyber"
+date: "2025-05-25T13:45:45+01:00"
+draft: false
+description: "Learn more about Invest Cyber and our cybersecurity investment philosophy"
+---
 
 # About Invest Cyber
 
@@ -37,12 +37,9 @@ Every hour spent learning offensive security is an investment that compounds ove
 ## Connect with Us
 
 - **Email**: contact@investcyber.com
-- **GitHub**: [Invest Cyber Projects](https://github.com/yourusername)
-- **LinkedIn**: [Professional Network](https://linkedin.com/in/yourprofile)
+- **GitHub**: [Hanimn/investcyber-blog](https://github.com/Hanimn/investcyber-blog)
+- **LinkedIn**: [LinkedIn Profile](https://linkedin.com/in/yourprofile) <!-- Please update this link -->
 
 ## Investment Disclaimer
 
-All content is for educational and authorized testing purposes only. Always ensure proper authorization before conducting security assessments. Invest responsibly in cybersecurity knowledge!ate = '2025-05-25T13:45:51+01:00'
-draft = true
-title = 'About'
-+++
+All content is for educational and authorized testing purposes only. Always ensure proper authorization before conducting security assessments. Invest responsibly in cybersecurity knowledge!
