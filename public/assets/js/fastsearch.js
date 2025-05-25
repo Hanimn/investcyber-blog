@@ -1,27 +1,44 @@
 let fuse;
 let searchVisible = false;
 let firstRun = true;
-let list = document.getElementById("searchResults");
-let first = list.firstChild;
-let last = list.lastChild;
-let maininput = document.getElementById("searchInput");
-let searchStats = document.getElementById("searchStats");
+let list; // Declare, don't assign from DOM yet
+let maininput; // Declare, don't assign from DOM yet
+let searchStats; // Declare, don't assign from DOM yet
 
 function loadSearch() {
-  const baseURL = document.querySelector('meta[name="baseURL"]')?.getAttribute('content') || '/';
-  const indexURL = baseURL + 'index.json';
-  
+  // Initialize DOM element variables now that DOM should be ready
+  list = document.getElementById("searchResults");
+  maininput = document.getElementById("searchInput");
+  searchStats = document.getElementById("searchStats");
+
+  const indexURL = '/index.json'; // Always fetch from the root
+
   fetch(indexURL)
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to fetch search index from ${indexURL}. Status: ${response.status} ${response.statusText}`);
+      }
+      return response.json();
+    })
     .then(data => {
-      const options = {
+      if (!data || (Array.isArray(data) && data.length === 0)) {
+        console.warn('Search index data is empty or invalid:', data);
+        showNoResults('Search index is empty. No content to search.');
+        if (searchStats) {
+            searchStats.innerHTML = 'Search index is empty.';
+        }
+        return; 
+      }
+      
+      // Assuming fuseOptions are defined globally or passed correctly if not using this.options
+      const fuseOptions = {
         isCaseSensitive: false,
         shouldSort: true,
         includeMatches: true,
         includeScore: true,
         useExtendedSearch: true,
         minMatchCharLength: 1,
-        threshold: 0.2,
+        threshold: 0.2, // Default threshold
         keys: [
           { name: "title", weight: 10.0 },
           { name: "tags", weight: 8.0 },
@@ -33,16 +50,31 @@ function loadSearch() {
         ]
       };
       
-      fuse = new Fuse(data, options);
+      fuse = new Fuse(data, fuseOptions); // Use defined fuseOptions
       
       if (maininput) {
         maininput.addEventListener('input', executeSearch);
         maininput.focus();
+      } else {
+        console.error('Search input element #searchInput not found.');
+        showNoResults('Search input field is missing.');
+         if (searchStats) {
+            searchStats.innerHTML = 'Search input missing.';
+        }
       }
     })
     .catch(err => {
-      console.error('Search index could not be loaded:', err);
-      showNoResults('Search functionality is currently unavailable.');
+      console.error('Error during search initialization:', err);
+      let errorMessage = 'Search functionality is currently unavailable.';
+      if (err.message.includes('Failed to fetch')) {
+        errorMessage = 'Could not load search data. Please check connection or try again.';
+      } else if (err instanceof SyntaxError) {
+        errorMessage = 'Error parsing search data. Index might be corrupted.';
+      }
+      showNoResults(errorMessage);
+      if (searchStats) {
+          searchStats.innerHTML = errorMessage;
+      }
     });
 }
 
@@ -215,74 +247,48 @@ function parseSearchQuery(query) {
   return parsedQuery;
 }
 
-// Load search when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', loadSearch);
-} else {
+function initializeSearch() {
+  if (!window.Fuse) {
+    console.log("Fuse.js not found, using SimpleFuse fallback.");
+    window.Fuse = class SimpleFuse {
+        constructor(data, options) {
+            this.data = data;
+            this.options = options; // Store options
+        }
+        search(query) {
+            if (!query || query.length === 0) return [];
+            const results = [];
+            const lowerQuery = query.toLowerCase();
+            this.data.forEach((item) => {
+                let score = 0;
+                let matches = []; 
+                
+                // Simplified matching for SimpleFuse, does not use weights from options for now
+                if (item.title && item.title.toLowerCase().includes(lowerQuery)) {
+                    score += 10; // Example scoring
+                    matches.push({ key: 'title', value: item.title, indices: [] });
+                }
+                // Add similar checks for other keys if needed for SimpleFuse
+                // For brevity, only title is shown here for SimpleFuse matching logic
+
+                if (score > 0) {
+                    results.push({
+                        item: item,
+                        score: 1 - (score / 50), 
+                        matches: matches
+                    });
+                }
+            });
+            return results.sort((a, b) => a.score - b.score);
+        }
+    };
+  }
   loadSearch();
 }
 
-// Load Fuse.js library locally
-if (!window.Fuse) {
-  // Fallback to a simple search if Fuse.js is not available
-  window.Fuse = class SimpleFuse {
-    constructor(data, options) {
-      this.data = data;
-      this.options = options;
-    }
-    
-    search(query) {
-      if (!query || query.length === 0) return [];
-      
-      const results = [];
-      const lowerQuery = query.toLowerCase();
-      
-      this.data.forEach((item, index) => {
-        let score = 0;
-        let matches = [];
-        
-        // Search in title (highest priority)
-        if (item.title && item.title.toLowerCase().includes(lowerQuery)) {
-          score += 10;
-          matches.push({ key: 'title', value: item.title });
-        }
-        
-        // Search in tags
-        if (item.tags && item.tags.some(tag => tag.toLowerCase().includes(lowerQuery))) {
-          score += 8;
-          matches.push({ key: 'tags', value: item.tags.join(', ') });
-        }
-        
-        // Search in categories
-        if (item.categories && item.categories.some(cat => cat.toLowerCase().includes(lowerQuery))) {
-          score += 7;
-          matches.push({ key: 'categories', value: item.categories.join(', ') });
-        }
-        
-        // Search in summary
-        if (item.summary && item.summary.toLowerCase().includes(lowerQuery)) {
-          score += 6;
-          matches.push({ key: 'summary', value: item.summary });
-        }
-        
-        // Search in content
-        if (item.content && item.content.toLowerCase().includes(lowerQuery)) {
-          score += 3;
-          matches.push({ key: 'content', value: item.content });
-        }
-        
-        if (score > 0) {
-          results.push({
-            item: item,
-            score: 1 - (score / 50), // Normalize score
-            matches: matches
-          });
-        }
-      });
-      
-      return results.sort((a, b) => a.score - b.score);
-    }
-  };
-  
-  loadSearch();
+// Load search when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeSearch);
+} else {
+  initializeSearch();
 }

@@ -6,7 +6,7 @@ theme = 'PaperMod'
 
 # Output formats for search functionality
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
 
 [params]
   author = "Hani Momeninia" # Updated author name
@@ -17,7 +17,7 @@ theme = 'PaperMod'
   
   # Favicon and Apple Touch Icon configuration
   # Ensure these files are in the 'assets' directory
-  assets.favicon = "favicon.ico" 
+  assets.favicon = "favicon.svg" 
   assets.favicon16x16 = "favicon-16x16.png"
   assets.favicon32x32 = "favicon-32x32.png"
   assets.apple_touch_icon = "apple-touch-icon.png"
@@ -26,13 +26,13 @@ theme = 'PaperMod'
   
   # PaperMod specific
   ShowReadingTime = true
-  ShowShareButtons = true
+  ShowShareButtons = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowWordCount = true
   ShowToc = true
-  ShowSearchPage = true
+  ShowSearchPage = false
   ShowFullTextinRSS = true
   
   # Enhanced search experience
@@ -87,11 +87,11 @@ theme = 'PaperMod'
   # Social links
   [[params.socialIcons]]
   name = "github"
-  url = "https://github.com/yourusername"
+  url = "https://github.com/Hanimn"
   
   [[params.socialIcons]]
   name = "linkedin"
-  url = "https://linkedin.com/in/yourprofile"
+  url = "https://www.linkedin.com/in/hanimomeninia/"
 
 [menu]
   [[menu.main]]
@@ -112,11 +112,11 @@ theme = 'PaperMod'
     url = "/projects/"
     weight = 30
     
-  [[menu.main]]
-    identifier = "search"
-    name = "Search"
-    url = "/search/"
-    weight = 35
+  # [[menu.main]]
+  #   identifier = "search"
+  #   name = "Search"
+  #   url = "/search/"
+  #   weight = 35
     
   [[menu.main]]
     identifier = "about"

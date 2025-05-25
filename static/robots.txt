@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://invest-cyber.netlify.app/sitemap.xml
