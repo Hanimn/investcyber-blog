@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Methodology on Invest Cyber</title>
+    <link>http://localhost:1313/tags/methodology/</link>
+    <description>Recent content in Methodology on Invest Cyber</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 May 2025 14:10:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/methodology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Red Team Methodology: A Strategic Investment Approach</title>
+      <link>http://localhost:1313/posts/red-team-methodology/</link>
+      <pubDate>Sun, 25 May 2025 14:10:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/red-team-methodology/</guid>
+      <description>Comprehensive guide to red team methodology and strategic security investments</description>
+      <content:encoded><![CDATA[<h1 id="red-team-methodology-a-strategic-investment-approach-">Red Team Methodology: A Strategic Investment Approach 🎯</h1>
+<p>In cybersecurity, a well-structured red team methodology is your best investment for understanding and improving organizational security posture.</p>
+<h2 id="investment-framework-for-red-team-operations">Investment Framework for Red Team Operations</h2>
+<h3 id="1-reconnaissance-phase-">1. <strong>Reconnaissance Phase</strong> 💰</h3>
+<ul>
+<li><strong>OSINT Collection</strong>: Information gathering with maximum ROI</li>
+<li><strong>Target Profiling</strong>: Understanding the attack surface</li>
+<li><strong>Threat Modeling</strong>: Identifying high-value targets</li>
+</ul>
+<h3 id="2-initial-access-">2. <strong>Initial Access</strong> 🔓</h3>
+<ul>
+<li><strong>Phishing Campaigns</strong>: Social engineering investments</li>
+<li><strong>Vulnerability Exploitation</strong>: Technical attack vectors</li>
+<li><strong>Physical Security</strong>: On-site assessment strategies</li>
+</ul>
+<h3 id="3-persistence--privilege-escalation-">3. <strong>Persistence &amp; Privilege Escalation</strong> ⬆️</h3>
+<ul>
+<li><strong>Lateral Movement</strong>: Expanding access strategically</li>
+<li><strong>Credential Harvesting</strong>: Maximizing access opportunities</li>
+<li><strong>Defense Evasion</strong>: Maintaining operational security</li>
+</ul>
+<h3 id="4-data-exfiltration--impact-">4. <strong>Data Exfiltration &amp; Impact</strong> 📊</h3>
+<ul>
+<li><strong>Sensitive Data Identification</strong>: Finding crown jewels</li>
+<li><strong>Exfiltration Techniques</strong>: Demonstrating real impact</li>
+<li><strong>Business Impact Assessment</strong>: Quantifying security risks</li>
+</ul>
+<h2 id="key-tools-for-maximum-investment-returns">Key Tools for Maximum Investment Returns</h2>
+<h3 id="reconnaissance-tools"><strong>Reconnaissance Tools:</strong></h3>
+<ul>
+<li>Nmap, Masscan, Shodan</li>
+<li>Recon-ng, theHarvester</li>
+<li>OSINT frameworks</li>
+</ul>
+<h3 id="exploitation-frameworks"><strong>Exploitation Frameworks:</strong></h3>
+<ul>
+<li>Metasploit, Cobalt Strike</li>
+<li>Empire, Covenant</li>
+<li>Custom payload development</li>
+</ul>
+<h3 id="post-exploitation"><strong>Post-Exploitation:</strong></h3>
+<ul>
+<li>Bloodhound, PowerView</li>
+<li>Mimikatz, Rubeus</li>
+<li>Living-off-the-land techniques</li>
+</ul>
+<h2 id="roi-metrics-for-red-team-engagements">ROI Metrics for Red Team Engagements</h2>
+<ol>
+<li><strong>Time to Compromise</strong>: How quickly can an attacker gain access?</li>
+<li><strong>Privilege Escalation Speed</strong>: Path to administrative rights</li>
+<li><strong>Detection Evasion</strong>: How long can you remain undetected?</li>
+<li><strong>Business Impact</strong>: What critical assets can be accessed?</li>
+</ol>
+<h2 id="best-practices-for-investment-success">Best Practices for Investment Success</h2>
+<ul>
+<li><strong>Document Everything</strong>: Create reproducible attack paths</li>
+<li><strong>Collaborate with Blue Team</strong>: Maximize defensive improvements</li>
+<li><strong>Continuous Learning</strong>: Stay updated with latest TTPs</li>
+<li><strong>Legal Compliance</strong>: Always maintain proper authorization</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Investing in structured red team methodology pays dividends in organizational security awareness and defensive capabilities. Every engagement is an opportunity to strengthen the security posture.</p>
+<p><strong>Remember</strong>: The goal isn&rsquo;t just to break in—it&rsquo;s to help organizations build better defenses and security awareness. 🛡️</p>
+<hr>
+<p><em>What&rsquo;s your experience with red team methodologies? Share your insights in the comments below!</em></p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

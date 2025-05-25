@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Invest Cyber</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Invest Cyber</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 May 2025 14:15:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Information Gathering</title>
+      <link>http://localhost:1313/tags/information-gathering/</link>
+      <pubDate>Sun, 25 May 2025 14:15:00 +0100</pubDate>
+      <guid>http://localhost:1313/tags/information-gathering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Intelligence</title>
+      <link>http://localhost:1313/tags/intelligence/</link>
+      <pubDate>Sun, 25 May 2025 14:15:00 +0100</pubDate>
+      <guid>http://localhost:1313/tags/intelligence/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Osint</title>
+      <link>http://localhost:1313/tags/osint/</link>
+      <pubDate>Sun, 25 May 2025 14:15:00 +0100</pubDate>
+      <guid>http://localhost:1313/tags/osint/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reconnaissance</title>
+      <link>http://localhost:1313/tags/reconnaissance/</link>
+      <pubDate>Sun, 25 May 2025 14:15:00 +0100</pubDate>
+      <guid>http://localhost:1313/tags/reconnaissance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cybersecurity</title>
+      <link>http://localhost:1313/tags/cybersecurity/</link>
+      <pubDate>Sun, 25 May 2025 14:13:09 +0100</pubDate>
+      <guid>http://localhost:1313/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Penetration Testing</title>
+      <link>http://localhost:1313/tags/penetration-testing/</link>
+      <pubDate>Sun, 25 May 2025 14:13:09 +0100</pubDate>
+      <guid>http://localhost:1313/tags/penetration-testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Red Team</title>
+      <link>http://localhost:1313/tags/red-team/</link>
+      <pubDate>Sun, 25 May 2025 14:13:09 +0100</pubDate>
+      <guid>http://localhost:1313/tags/red-team/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>http://localhost:1313/tags/tools/</link>
+      <pubDate>Sun, 25 May 2025 14:13:09 +0100</pubDate>
+      <guid>http://localhost:1313/tags/tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vulnerability Assessment</title>
+      <link>http://localhost:1313/tags/vulnerability-assessment/</link>
+      <pubDate>Sun, 25 May 2025 14:13:09 +0100</pubDate>
+      <guid>http://localhost:1313/tags/vulnerability-assessment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Methodology</title>
+      <link>http://localhost:1313/tags/methodology/</link>
+      <pubDate>Sun, 25 May 2025 14:10:00 +0100</pubDate>
+      <guid>http://localhost:1313/tags/methodology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security Strategy</title>
+      <link>http://localhost:1313/tags/security-strategy/</link>
+      <pubDate>Sun, 25 May 2025 14:10:00 +0100</pubDate>
+      <guid>http://localhost:1313/tags/security-strategy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Invest Cyber</title>
+      <link>http://localhost:1313/tags/invest-cyber/</link>
+      <pubDate>Sun, 25 May 2025 13:45:45 +0100</pubDate>
+      <guid>http://localhost:1313/tags/invest-cyber/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Welcome</title>
+      <link>http://localhost:1313/tags/welcome/</link>
+      <pubDate>Sun, 25 May 2025 13:45:45 +0100</pubDate>
+      <guid>http://localhost:1313/tags/welcome/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
