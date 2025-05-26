@@ -1,5 +1,5 @@
 enableGitInfo = true # Temporarily disabled to prevent build error if no git commits
-baseURL = 'http://investcyber.com/' # Updated baseURL
+baseURL = 'https://investcyber.com/' # Updated baseURL to HTTPS
 languageCode = 'en-us'
 title = 'Invest Cyber'
 theme = 'PaperMod'
