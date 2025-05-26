@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Automation on Invest Cyber</title><link>https://hanimn.github.io/investcyber-blog/categories/automation/</link><description>Recent content in Automation on Invest Cyber</description><generator>Hugo -- 0.147.5</generator><language>en-us</language><lastBuildDate>Sun, 25 May 2025 23:46:53 +0100</lastBuildDate><atom:link href="https://hanimn.github.io/investcyber-blog/categories/automation/index.xml" rel="self" type="application/rss+xml"/><item><title>Automating Red Team Operations: Efficiency and Pitfalls</title><link>https://hanimn.github.io/investcyber-blog/blog/red-team-automation-efficiency-pitfalls/</link><pubDate>Sun, 25 May 2025 14:30:00 +0100</pubDate><guid>https://hanimn.github.io/investcyber-blog/blog/red-team-automation-efficiency-pitfalls/</guid><description>Exploring the benefits and challenges of automating red team tasks, from reconnaissance to reporting.</description><content:encoded><![CDATA[<h2 id="the-drive-towards-red-team-automation">The Drive Towards Red Team Automation</h2>
+<p>In the fast-paced world of cybersecurity, efficiency is key. Red teams are increasingly looking towards automation to streamline repetitive tasks, cover more ground, and focus human expertise on complex, creative attack vectors. This post explores the what, why, and how of red team automation.</p>
+<h3 id="what-can-be-automated">What Can Be Automated?</h3>
+<ul>
+<li><strong>Reconnaissance:</strong> Automated discovery of subdomains, open ports, and publicly available information.</li>
+<li><strong>Vulnerability Scanning:</strong> Integrating scanners to identify known vulnerabilities.</li>
+<li><strong>Payload Generation &amp; Delivery:</strong> Automating parts of the payload creation and phishing campaign execution.</li>
+<li><strong>Post-Exploitation Tasks:</strong> Automating common post-exploitation activities like credential harvesting or basic lateral movement checks.</li>
+<li><strong>Reporting:</strong> Generating initial report structures or data aggregation.</li>
+</ul>
+<h3 id="benefits-of-automation">Benefits of Automation</h3>
+<ul>
+<li><strong>Increased Speed &amp; Scale:</strong> Cover larger attack surfaces more quickly.</li>
+<li><strong>Consistency:</strong> Ensures repeatable processes and reduces human error in routine tasks.</li>
+<li><strong>Resource Optimization:</strong> Frees up skilled operators for more advanced analysis and novel attack development.</li>
+<li><strong>Continuous Testing:</strong> Enables more frequent, automated checks of defenses.</li>
+</ul>
+<h3 id="potential-pitfalls-and-challenges">Potential Pitfalls and Challenges</h3>
+<ul>
+<li><strong>Over-Reliance:</strong> Automation is a tool, not a replacement for skilled operators.</li>
+<li><strong>Detection Signatures:</strong> Automated tools can be noisy and easily fingerprinted by blue teams.</li>
+<li><strong>Lack of Adaptability:</strong> Automated scripts may struggle with novel defenses or unexpected environments.</li>
+<li><strong>Ethical Considerations:</strong> Ensuring automated actions stay within scope and legal boundaries.</li>
+<li><strong>Maintenance Overhead:</strong> Keeping automation scripts and tools up-to-date.</li>
+</ul>
+<h2 id="building-a-balanced-automation-strategy">Building a Balanced Automation Strategy</h2>
+<p><em>(Further discussion on developing a strategy, choosing tools, and integrating automation effectively&hellip;)</em></p>
+]]></content:encoded></item></channel></rss>
