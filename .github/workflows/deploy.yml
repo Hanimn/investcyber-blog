@@ -1,6 +1,9 @@
 # This workflow builds the Hugo site and deploys it to GitHub Pages (gh-pages branch)
 name: Build and Deploy Hugo Site
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
@@ -13,9 +16,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          # If you use submodules (e.g., theme as submodule), uncomment below
-          # submodules: recursive
           fetch-depth: 0
+          persist-credentials: true
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
