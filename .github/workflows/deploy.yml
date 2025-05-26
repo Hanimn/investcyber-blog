@@ -35,5 +35,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
-          # Optional: set custom domain if needed
-          # cname: 'your.custom.domain'
+          cname: 'investcyber.com' # Added custom domain
