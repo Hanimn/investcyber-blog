@@ -1,5 +1,5 @@
 enableGitInfo = true # Temporarily disabled to prevent build error if no git commits
-baseURL = 'https://investcyber.com/'
+baseURL = 'https://hanimn.github.io/investcyber-blog/'
 languageCode = 'en-us'
 title = 'Invest Cyber'
 theme = 'PaperMod'
