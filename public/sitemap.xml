@@ -2,76 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/categories/automation/</loc>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/automation/</loc>
-    <lastmod>2025-05-25T14:40:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2025-05-25T14:40:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-05-25T14:40:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/cybersecurity/</loc>
-    <lastmod>2025-05-25T14:40:00+01:00</lastmod>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/ethical-opsec-automated-red-teaming/</loc>
-    <lastmod>2025-05-25T14:40:00+01:00</lastmod>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/ethics/</loc>
-    <lastmod>2025-05-25T14:40:00+01:00</lastmod>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ethics/</loc>
-    <lastmod>2025-05-25T14:40:00+01:00</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/collaboration/</loc>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cybersecurity/</loc>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/cybersecurity-strategy/</loc>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/devsecops/</loc>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-05-25T22:29:47+01:00</lastmod>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/opsec/</loc>
-    <lastmod>2025-05-25T14:40:00+01:00</lastmod>
+    <loc>http://localhost:1313/tags/purple-team/</loc>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/red-team/</loc>
-    <lastmod>2025-05-25T14:40:00+01:00</lastmod>
+    <loc>http://localhost:1313/categories/security-operations/</loc>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/red-team/</loc>
-    <lastmod>2025-05-25T14:40:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/strategy/</loc>
-    <lastmod>2025-05-25T14:40:00+01:00</lastmod>
+    <loc>http://localhost:1313/tags/security-testing/</loc>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-05-25T14:40:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/cybersecurity-tools/</loc>
-    <lastmod>2025-05-25T14:35:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/offensive-security/</loc>
-    <lastmod>2025-05-25T14:35:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/tooling/</loc>
-    <lastmod>2025-05-25T14:35:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/tools/</loc>
-    <lastmod>2025-05-25T14:35:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/top-tools-red-team-automation-2025/</loc>
-    <lastmod>2025-05-25T14:35:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/red-team-automation-efficiency-pitfalls/</loc>
-    <lastmod>2025-05-25T14:30:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/automation/</loc>
-    <lastmod>2025-05-25T14:30:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/tooling/</loc>
-    <lastmod>2025-05-25T14:30:00+01:00</lastmod>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2025-05-25T22:05:53+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/</loc>
-    <lastmod>2025-05-25T22:29:47+01:00</lastmod>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/talks/</loc>
-    <lastmod>2025-05-25T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-25T23:46:53+01:00</lastmod>
   </url>
 </urlset>

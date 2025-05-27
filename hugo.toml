@@ -81,7 +81,7 @@ theme = 'PaperMod'
   # Home page content
   [params.homeInfoParams]
     Title = "Welcome to Invest Cyber"
-    Content = "Investing in Cybersecurity Knowledge & Red Team Excellence"
+    Content = "Welcome to Invest Cyber. We are committed to empowering cybersecurity professionals by sharing the latest research, practical Tactics, Techniques, and Procedures (TTPs), and cutting-edge resources, with a special focus on red team excellence and offensive security. Join our community as we explore innovative strategies, share valuable insights, and work together to shape the future of offensive security, ultimately building a more resilient digital world."
   
   # Social links
   [[params.socialIcons]]
@@ -90,7 +90,7 @@ theme = 'PaperMod'
   
   [[params.socialIcons]]
   name = "linkedin"
-  url = "https://www.linkedin.com/in/hanimomeninia/"
+  url = "https://www.linkedin.com/company/invest-cyber/"
 
 [menu]
   [[menu.main]]

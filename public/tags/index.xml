@@ -6,69 +6,48 @@
     <description>Recent content in Tags on Invest Cyber</description>
     <generator>Hugo -- 0.147.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 May 2025 14:40:00 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 25 May 2025 23:46:53 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automation</title>
       <link>http://localhost:1313/tags/automation/</link>
-      <pubDate>Sun, 25 May 2025 14:40:00 +0100</pubDate>
+      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Collaboration</title>
+      <link>http://localhost:1313/tags/collaboration/</link>
+      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/collaboration/</guid>
       <description></description>
     </item>
     <item>
       <title>Cybersecurity</title>
       <link>http://localhost:1313/tags/cybersecurity/</link>
-      <pubDate>Sun, 25 May 2025 14:40:00 +0100</pubDate>
+      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/cybersecurity/</guid>
       <description></description>
     </item>
     <item>
-      <title>Ethics</title>
-      <link>http://localhost:1313/tags/ethics/</link>
-      <pubDate>Sun, 25 May 2025 14:40:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/ethics/</guid>
+      <title>DevSecOps</title>
+      <link>http://localhost:1313/tags/devsecops/</link>
+      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/devsecops/</guid>
       <description></description>
     </item>
     <item>
-      <title>OPSEC</title>
-      <link>http://localhost:1313/tags/opsec/</link>
-      <pubDate>Sun, 25 May 2025 14:40:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/opsec/</guid>
+      <title>Purple Team</title>
+      <link>http://localhost:1313/tags/purple-team/</link>
+      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/purple-team/</guid>
       <description></description>
     </item>
     <item>
-      <title>Red Team</title>
-      <link>http://localhost:1313/tags/red-team/</link>
-      <pubDate>Sun, 25 May 2025 14:40:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/red-team/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cybersecurity Tools</title>
-      <link>http://localhost:1313/tags/cybersecurity-tools/</link>
-      <pubDate>Sun, 25 May 2025 14:35:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/cybersecurity-tools/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Offensive Security</title>
-      <link>http://localhost:1313/tags/offensive-security/</link>
-      <pubDate>Sun, 25 May 2025 14:35:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/offensive-security/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tools</title>
-      <link>http://localhost:1313/tags/tools/</link>
-      <pubDate>Sun, 25 May 2025 14:35:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/tools/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tooling</title>
-      <link>http://localhost:1313/tags/tooling/</link>
-      <pubDate>Sun, 25 May 2025 14:30:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/tooling/</guid>
+      <title>Security Testing</title>
+      <link>http://localhost:1313/tags/security-testing/</link>
+      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/security-testing/</guid>
       <description></description>
     </item>
   </channel>
