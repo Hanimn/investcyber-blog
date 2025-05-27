@@ -21,27 +21,18 @@ description = ""
         </a></p>
     </div>
 </div>
-<script>
-function filterSelection(category) {
-    let cards, i;
-    cards = document.getElementsByClassName("project-card");
-    if (category == "all") category = "";
-    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-    for (i = 0; i < cards.length; i++) {
-        cards[i].style.display = "none";
-        if (cards[i].getAttribute('data-category').indexOf(category) > -1) {
-            cards[i].style.display = "block"; // Or "flex", "grid" depending on your layout
-        }
-    }
+<div class="project-card" data-category="tool">
+    <div class="project-image-container">
+        <img src="/images/projects/logsweep.png" alt="LogSweep OSQuery Extensions" class="project-image">
+    </div>
+    <div class="project-card-content">
+        <h3>LogSweep OSQuery Extensions</h3>
+        <p><strong>Description:</strong> Developed LogSweep, a suite of OSQuery extensions designed to enhance endpoint detection and response capabilities. These extensions provide deeper insights into system activities, helping security teams to identify and mitigate threats more effectively.</p>
+        <p><strong>Technologies/Focus:</strong> OSQuery, Endpoint Security, C++, Threat Detection</p>
+        <p><a href="https://github.com/Hanimn/LogSweep-osquery-extensions" target="_blank" class="github-link-button">
+            View on GitHub
+        </a></p>
+    </div>
+</div>
 
-    // Add active class to the current button
-    let btns = document.getElementsByClassName("filter-button");
-    for (i = 0; i < btns.length; i++) {
-        btns[i].className = btns[i].className.replace(" active", "");
-    }
-    event.currentTarget.className += " active";
-}
-
-// Show all cards by default
-filterSelection('all');
-</script>
+<script src="{{ '/js/project-filter.js' | relURL }}"></script>
